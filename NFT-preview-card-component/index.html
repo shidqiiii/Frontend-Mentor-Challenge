@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap");
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: hsl(217, 54%, 11%);
+        color: hsl(0, 0%, 100%);
+        box-sizing: border-box;
+      }
+
+      main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .card {
+        width: 325px;
+        margin: 0 auto;
+        background-color: hsl(216, 50%, 16%);
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .content {
+        padding: 10px 20px;
+      }
+
+      img {
+        width: 300px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 10px;
+      }
+
+      .image{
+        position: relative;
+      }
+
+      .image-overlay{
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(178, 100%, 50%, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .image-overlay:hover{
+        opacity: 1;
+      }
+
+      #overlay{
+        width: 50px;
+      }
+
+      h2 {
+        margin: 0;
+        transition: color 0.5s;
+        display: inline-block;
+      }
+
+      h2:hover{
+        cursor: pointer;
+        color: hsl(178, 100%, 50%);
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        color: hsl(215, 51%, 70%);
+        margin: 10px 0;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+
+      .flex img {
+        margin: 20px 5px;
+      }
+
+      .flex #eth {
+        font-weight: 400;
+        color: hsl(178, 100%, 50%);
+      }
+
+      section {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+      }
+
+      #right{
+        justify-content: end;
+      }
+
+      hr {
+        border-color: hsl(215, 32%, 27%);
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      footer img {
+        width: 35px;
+        height: 35px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+        margin: 5px 10px 5px 0;
+      }
+
+      footer p {
+        font-size: 15px;
+        flex-basis: 75%;
+      }
+
+      footer span {
+        color: hsl(0, 0%, 100%);
+        transition: color 0.5s;
+      }
+
+      footer span:hover{
+        cursor: pointer;
+        color: hsl(178, 100%, 50%);
+      }
+
+      .attribution {
+        margin-top: 15px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="image">
+          <img src="images/image-equilibrium.jpg" alt="image nft" />
+          <div class="image-overlay">
+            <img id="overlay" src="/images/icon-view.svg" alt="">
+          </div>
+
+        </div>
+        <div class="content">
+          <article>
+            <h2>Equilibrium #3429</h2>
+            <p>
+              Our Equilibrium collection promotes <br />
+              balance and calm.
+            </p>
+            <div class="flex">
+              <section>
+                <img src="images/icon-ethereum.svg" style="width: 10px;" alt="ehterium" />
+                <p id="eth">0.041 ETH</p>
+              </section>
+
+              <section id="right">
+                <img src="images/icon-clock.svg" style="width: 20px;" alt="ehterium" />
+                <p id=>3 days left</p>
+              </section>
+            </div>
+            <hr />
+          </article>
+          <footer>
+            <img src="images/image-avatar.png" alt="image profile" />
+            <p>Creation of <span>Jules Wyvern</span></p>
+          </footer>
+        </div>
+      </div>
+
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://arunikaproject.netlify.app/">Arunika</a>.</div>
+    </main>
+  </body>
+</html>
